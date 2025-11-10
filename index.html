@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descarte de Lixo Correto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <h1>EcoLixo</h1>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">☰</button>
+        <nav>
+            <a href="#about">Sobre Nós</a>
+            <a href="#services">Serviços</a>
+            <a href="#education">Educação</a>
+            <a href="#map">Área de Atuação</a>
+            <a href="#contact">Contato</a>
+        </nav>
+    </header>
+
+    <!-- Banner -->
+    <div class="banner">
+        <div class="banner-content">
+            <h2>Descarte de Lixo Correto</h2>
+            <p>Transformando resíduos em sustentabilidade para um futuro mais limpo.</p>
+            <a href="#contact" class="btn">Solicite Coleta</a>
+        </div>
+    </div>
+
+    <!-- Serviços -->
+    <section id="services" class="animate">
+        <div class="services">
+            <h2>Serviços</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Coleta Residencial</h3>
+                    <p>Serviço de coleta de lixo doméstico com separação correta para reciclagem.</p>
+                </div>
+                <div class="card">
+                    <h3>Coleta Comercial</h3>
+                    <p>Atendimento a empresas e comércios para descarte adequado de resíduos.</p>
+                </div>
+                <div class="card">
+                    <h3>Coleta Seletiva</h3>
+                    <p>Separação de papel, plástico, metal e vidro, garantindo reciclagem eficiente.</p>
+                </div>
+                <div class="card">
+                    <h3>Resíduos Perigosos</h3>
+                    <p>Coleta e descarte correto de eletrônicos, pilhas, baterias e materiais especiais.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Educação Ambiental -->
+    <section id="education" class="animate">
+        <div class="education">
+            <h2>Educação Ambiental</h2>
+            <p>Aprenda a separar o lixo corretamente, reduzir resíduos e contribuir para um futuro sustentável. Confira dicas, infográficos e materiais educativos sobre reciclagem e compostagem.</p>
+            <br>
+            <a href="dicas.html" class="btn">Conferir Dicas</a>
+        </div>
+    </section>
+
+    <!-- Sobre Nós -->
+    <section id="about" class="animate">
+        <div class="about">
+            <h2>Sobre Nós</h2>
+            <p>Somos uma empresa dedicada ao descarte de lixo correto, promovendo práticas sustentáveis e responsáveis com o meio ambiente. Nosso objetivo é transformar cada resíduo em oportunidade de reciclagem e preservação ambiental.</p>
+        </div>
+    </section>
+
+    <!-- Área de Atuação (Mapa) -->
+    <section id="map" class="animate visible">
+        <h2>Área de Atuação</h2>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/d/embed?mid=1t_W44kGZqCbSGV92GRNEoLOD3Y8Ndg4&ehbc=2E312F&noprof=1" 
+            width="640" height="480"></iframe>
+        </div>
+    </section>
+
+    <!-- Contato / Agendamento -->
+    <section id="contact" class="animate">
+        <div class="contact">
+            <h2>Agendamento de Coleta / Contato</h2>
+            <form id="contactForm">
+            <h3>Tipo de Resíduo</h3>
+            <div class="residuos-container">
+                <label>
+                <input type="checkbox" name="residuos" value="organico">
+                <span class="chip">Lixo Orgânico</span>
+                </label>
+                <label>
+                <input type="checkbox" name="residuos" value="metal">
+                <span class="chip">Metal</span>
+                </label>
+                <label>
+                <input type="checkbox" name="residuos" value="vidro">
+                <span class="chip">Vidro</span>
+                </label>
+                <label>
+                <input type="checkbox" name="residuos" value="plastico">
+                <span class="chip">Plastico</span>
+                </label>
+                <br>
+                <br>
+                <label>
+                <input type="checkbox" name="residuos" value="papel">
+                <span class="chip">Papel</span>
+                </label>
+                <label>
+                <input type="checkbox" name="residuos" value="perigosos">
+                <span class="chip">Residuos Perigosos</span>
+                </label>
+                <label>
+                <input type="checkbox" name="residuos" value="madeira">
+                <span class="chip">Madeira</span>
+                </label>
+                <br>
+                <br>
+                <label>
+                <input type="checkbox" name="residuos" value="radioativo">
+                <span class="chip">Resíduos Radioativos</span>
+                </label>
+                <label>
+                <input type="checkbox" name="residuos" value="ambulatorio">
+                <span class="chip">Resíduos Ambulatórios</span>
+                </label>
+                <br>
+                <br>
+                <label>
+                <input type="checkbox" name="residuos" value="nao_reciclavel">
+                <span class="chip">Não Recicláveis</span>
+                </label>
+            </div>
+
+            <input type="text" name="nome" placeholder="Nome" required>
+            <input type="email" name="email" placeholder="E-mail" required>
+            <input type="text"  name="endereco" placeholder="Endereço" required>
+            <input type="date" name="data" required>
+            <textarea name="mensagem" placeholder="Mensagem" rows="4"></textarea>
+            <button type="submit">Enviar</button>
+            </form>
+            <p id="successMessage" style="display:none; color:green; font-weight:bold; margin-top:10px;">
+                ✅ Sua solicitação foi enviada com sucesso!
+            </p>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>© 2025 EcoLixo - Descarte de Lixo Correto. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
