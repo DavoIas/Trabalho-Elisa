@@ -361,3 +361,33 @@ input[type="checkbox"]:checked + .chip {
     padding: 6px 18px;        /* ajusta o tamanho dos botões */
   }
 }
+
+.lisoca {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+  gap: 1rem; /* espaço entre as imagens */
+  justify-items: center; /* centraliza as imagens */
+  justify-content: center; /* centraliza o grid na horizontal */
+  align-items: center; /* centraliza o conteúdo na vertical */
+  justify-items: center; /* centraliza cada imagem dentro da célula */
+  margin: 0 auto; /* centraliza o bloco dentro do container pai */
+}
+
+.lisoca img {
+  width: 35rem;
+  height: 30rem;
+  object-fit: cover; /* corta o excesso sem distorcer */
+  border-radius: 20px; /* opcional: cantos arredondados */
+  opacity: 0.85;
+}
+
+@media (max-width: 768px) {
+  .lisoca {
+    grid-template-columns: 1fr; /* uma coluna só no celular */
+  }
+
+  .lisoca img {
+    width: 100%;
+    height: auto;
+  }
+}
